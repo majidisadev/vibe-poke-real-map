@@ -1,0 +1,29 @@
+.region-manager {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pokemon-list {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.region-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .pokemon-list {
+    max-height: 300px;
+  }
+}

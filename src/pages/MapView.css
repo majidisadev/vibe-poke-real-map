@@ -1,0 +1,35 @@
+.map-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: calc(100vh - 200px);
+}
+
+.map-view table {
+  width: 100%;
+}
+
+.map-view table th {
+  background-color: hsl(var(--muted));
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.map-view table td,
+.map-view table th {
+  text-align: left;
+}
+
+.map-view table tbody tr:hover {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}

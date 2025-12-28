@@ -152,11 +152,42 @@ The application uses IndexedDB for browser storage, which means:
 npm run build
 ```
 
+This will create a `dist/` folder containing the optimized production build.
+
 ### Preview Production Build
+
+To test the production build locally, use:
 
 ```bash
 npm run preview
 ```
+
+This will start a local server (usually at `http://localhost:4173`) to preview the production build.
+
+### Serving Production Build
+
+After building, the `dist/` folder contains all the static files needed to serve the application. You can use any static file server:
+
+**Using serve (recommended for quick testing):**
+```bash
+npx serve dist
+```
+
+**Using http-server:**
+```bash
+npx http-server dist
+```
+
+**Using Python:**
+```bash
+python -m http.server -d dist
+```
+
+**Deployment Options:**
+- **Vercel**: Connect your repository or deploy the `dist/` folder
+- **Netlify**: Drag and drop the `dist/` folder or connect your repository
+- **GitHub Pages**: Deploy the `dist/` folder using GitHub Actions
+- **Any web server**: Upload the contents of `dist/` to your web server's public directory
 
 ## License
 
